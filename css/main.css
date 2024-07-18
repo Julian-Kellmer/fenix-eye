@@ -1,0 +1,17 @@
+@import url('base/_reset.css');
+@import url('base/_scrollNav.css');
+@import url('base/_hero.css');
+@import url('base/_fonts.css');
+@import url('components/carrusel.css');
+@import url('components/modal.css');
+@import url('components/noticias.css');
+@import url('layout/header.css');
+@import url('layout/footer.css');
+@import url('layout/background.css');
+@import url('pages/home.css');
+@import url('pages/nuestroAdn.css');
+@import url('pages/representacion.css');
+@import url('pages/serv-colab.css');
+@import url('pages/noticias.css');
+@import url('pages/contacto.css');
+

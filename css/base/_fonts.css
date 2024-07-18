@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'Secondary-font';
+  src: url('/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-ExtraLight.ttf')
+    format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url('/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-ExtraLightItalic.ttf')
+    format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-LightItalic.ttf) format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-Italic.ttf) format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-MediumItalic.ttf) format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-SemiBoldItalic.ttf)
+    format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Secondary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Bai_Jamjuree/BaiJamjuree-BoldItalic.ttf) format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Thin.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-ExtraLight.ttf);
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-ThinItalic.ttf);
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-ExtraLightItalic.ttf);
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-SemiBoldItalic.ttf);
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-ExtraBoldItalic.ttf);
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Primary-font';
+  src: url(/Recursos_Pagina_web/Fuentes/Montserrat/static/Montserrat-BlackItalic.ttf);
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Primary-font', 'Secondary-font';
+}
+

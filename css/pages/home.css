@@ -1,0 +1,409 @@
+/* main.css */
+/* Ajustes generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Secondary-font', sans-serif;
+}
+
+/* Ajustes del header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s, backdrop-filter 0.5s;
+  z-index: 1000;
+}
+
+.header.transparent {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-left: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 180px;
+  margin-right: 56px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Ajustes de la sección principal */
+.content {
+  text-align: center;
+  color: white;
+  height: 100vh; /* Para que la sección ocupe toda la altura de la ventana */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.content img {
+  width: 100vw;
+  position: relative;
+}
+
+.content h2 {
+  font-family: 'Primary-font', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 85.33px;
+  letter-spacing: 10px;
+}
+
+.contenedorTexto {
+  width: 50vw;
+  height: 277px;
+  position: absolute;
+  top: 33%;
+  left: 82px;
+}
+
+.scroll-button-home {
+  background: none;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 90%;
+  /* left: 50%; */
+}
+
+.scroll-button-home svg {
+  width: 66px;
+  height: 66px;
+}
+
+.scroll-button-home svg path {
+  fill:white;
+}
+
+.other-pages {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 100px;
+  padding-bottom: 100px; /* Añade espacio al final */
+}
+
+.representacion {
+  display: flex;
+  margin-bottom: 100px; /* Añade espacio entre las secciones */
+}
+
+.info-representacion {
+  text-align: center;
+  margin: auto 150px;
+  width: 750px;
+  height: auto; /* Cambiado de 70px a auto para que se ajuste al contenido */
+  text-align: left;
+}
+
+.info-representacion h3 {
+  font-family: 'Primary-font';
+  font-weight: 700;
+  font-size: 71px;
+  color: white;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.info-representacion h3::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px; /* Ajusta según el largo de la línea deseada */
+  height: 3px; /* Grosor de la línea */
+  background-color: white; /* Color de la línea */
+}
+
+.info-representacion p {
+  font-family: 'Secondary-font';
+  font-weight: 200;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.info-representacion a {
+  font-family: 'Secondary-font';
+  font-weight: 400;
+  font-size: 21px;
+  color: #ff8300;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px; /* Añade un poco de espacio arriba */
+}
+
+.info-representacion span {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.servicios-colaboraciones {
+  display: flex;
+  width: 100%;
+}
+
+.info-servicios {
+  text-align: right;
+  margin: auto 0;
+  width: 50%;
+  height: auto; /* Cambiado de 70px a auto para que se ajuste al contenido */
+  text-align: right;
+}
+
+.info-servicios h3 {
+  font-family: 'Primary-font';
+  font-weight: 700;
+  font-size: 71px;
+  color: white;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+}
+
+.info-servicios h3::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 500px; /* Ajusta según el largo de la línea deseada */
+  height: 3px; /* Grosor de la línea */
+  background-color: white; /* Color de la línea */
+}
+
+.info-servicios p {
+  font-family: 'Secondary-font';
+  font-weight: 200;
+  font-size: 24px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.info-servicios a {
+  font-family: 'Secondary-font';
+  font-weight: 400;
+  font-size: 21px;
+  color: #ff8300;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px; /* Añade un poco de espacio arriba */
+}
+
+.info-servicios span {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.contendor-carrusel-servicios {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 700px;
+  height: 725px;
+  margin-bottom: 100px; /* Añade espacio entre las secciones */
+}
+
+.divisor {
+  position: relative;
+  width: 100vw;
+  height: 780px;
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+  display: flex;
+  justify-content: center;
+}
+
+.divisor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+  object-position: 50% -1650px; /* Mueve la imagen hacia arriba */
+  /* transform: scale(0.9); */
+}
+
+.divisor h4 {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Primary-font', sans-serif;
+  font-weight: 700;
+  font-size: 62px;
+}
+
+.more-info {
+  display: flex;
+  /* flex-direction: column; */
+  width: 100vw;
+  /* height: 100vh; */
+  margin-top: 100px;
+  justify-content: space-between;
+}
+
+.more-info-text {
+  width: 75vw;
+  margin: left 80px;
+}
+.more-info-text p {
+  font-family: 'Secondary-font';
+  font-size: 24px;
+  font-weight: 200;
+  margin-left: 80px;
+  width: 80%;
+  color: white;
+}
+.more-info-img {
+  width: 450px;
+  height: 450px;
+  margin-right: 80px;
+  align-items: right;
+}
+.more-info-img img {
+  height: 365px;
+}
+
+.more-info-img h5 {
+  text-align: right;
+  color: white;
+  margin: 10px 75px 0 0;
+  font-family: 'Primary-font';
+  font-weight: 700;
+  font-size: 31px;
+}
+.vicenncio-text p {
+  /* margin-left:80px ; */
+  width: 80%;
+  font-family: 'Secondary-font';
+  font-weight: 200;
+  font-size: 24px;
+  color: white;
+  margin-left: 150px;
+}
+.vicenncio-img {
+  width: 450px;
+  height: 450px;
+  margin-left: 80px;
+  align-items: left;
+}
+.vicenncio-img img {
+  height: 365px;
+  margin-right: 1500px;
+}
+
+.vicenncio-img h5 {
+  text-align: left;
+  color: white;
+  margin: 10px 60px;
+  font-family: 'Primary-font';
+  font-weight: 700;
+  font-size: 31px;
+}
+
+.contacto {
+  width: 100vw;
+  margin-top: 250px;
+}
+
+.contacto h4 {
+  font-family: 'Primary-font';
+  font-weight: 700;
+  font-size: 71px;
+  margin-left: 80px;
+  position: relative;
+  color: white;
+}
+
+.contacto h4::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1500px; /* Ajusta según el largo de la línea deseada */
+  height: 3px; /* Grosor de la línea */
+  background-color: white;
+  margin-left: 50px;
+}
+
+.contacto-conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 75px auto;
+}
+
+.contacto-region {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: 'Secondary-font';
+  align-items: center;
+}
+
+.contacto-region h6 {
+  font-family: 'Primary-font';
+  font-weight: 700;
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.separator {
+  width: 1px;
+  height: 100px;
+  background-color: white;
+  opacity: 0.5;
+  margin: 0 20px;
+}
+
+.phone-number,
+.email-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.phone-number svg,
+.email-info svg {
+  margin-right: 10px;
+}
+
+.phone-number p,
+.email-info p {
+  font-family: 'Secondary-font';
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+}

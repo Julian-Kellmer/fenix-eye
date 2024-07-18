@@ -1,0 +1,57 @@
+.content {
+  padding-top: 100px; 
+  /* Para evitar que el contenido se superponga con el header fijo */
+  text-align: center;
+    color: white;
+    height: 100vh; /* Para que la sección ocupe toda la altura de la ventana */
+    width: 100vw;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .content img {
+    width: 100vw;
+    position: relative;
+  }
+  
+  .content h2 {
+    font-family: 'Primary-font', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+  
+    text-align: left;
+  
+    line-height: 85.33px;
+    letter-spacing: 10px;
+  }
+  .contenedorTexto {
+    width: 50vw;
+    height: 277px;
+    position: absolute;
+    top: 33%;
+    left: 82px;
+  }
+  
+  .scroll-button {
+    background: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+  }
+  
+  .scroll-button svg {
+    width: 66px;
+    height: 66px;
+  }
+  
+  .scroll-button svg path {
+    fill: white;
+  }

@@ -1,0 +1,245 @@
+.info-adn img{
+    width: 60px;
+    /* margin: 0 auto; */
+}
+.info-adn {
+    /* margin-top: 150px; */
+    /* width: 100vw; */
+    height: 20vh;
+    text-align: center;
+    width: 1400px;
+    margin: 300px auto;
+  }
+  .info-adn h4 {
+    color: white;
+    font-family: 'Secondary-font';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 25px;
+  }
+  .info-adn p {
+    color: white;
+    font-family: 'Secondary-font';
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    margin: 100px auto;
+    width: 900px;
+  }
+
+  .hero-video {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ajusta el tamaño según tus necesidades */
+    margin:  auto;
+    margin-top: 500px;
+  }
+  
+  .video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px; /* Añade esquinas redondeadas si deseas */
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el video con un fondo semitransparente */
+    text-align: center;
+  }
+  
+  .overlay h2, .overlay p {
+    margin: 0;
+  }
+  
+  .play-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .play-button svg {
+    width: 66px;
+    height: 66px;
+    fill: white;
+  }
+  
+  .ilustracion-fenix {
+    width: 100vw;
+    margin: 150px auto; /* Centra el contenedor horizontalmente */
+    text-align: center;
+  }
+  
+  .ilustracion-fenix img {
+    max-width: 80%;
+    height: auto; /* Mantiene las proporciones de la imagen */
+    margin-bottom: 100px;
+  }
+  
+  .ilustracion-fenix h5 {
+    color: white;
+    font-family: 'Primary-font';
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    /* margin-top: 20px; */
+    margin: 50px auto;
+    width: 60vw;
+  }
+  
+
+
+
+  .equipo-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px 0;
+    /* height: 80vh; */
+  }
+  
+  .img-text-equipo {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .img-text-equipo img {
+    width: 250px;
+  }
+  
+  .texto-equipo{
+    display: flex;
+    gap:50px;
+    width: 100%;
+    padding: 0 25px;
+
+  }
+  .texto-equipo p {
+    font-family: 'secondary-font';
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+    margin-right: 250px;
+    /* position: relative; */
+  }
+  .texto-equipo h4 {
+    font-family: 'Primary-font';
+    font-size: 71px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    margin-left: 250px;
+  }
+  .texto-equipo h4::before{
+    content: '';
+    position: absolute;
+    top: 35%;
+    /* left: 100%; */
+    right: 0;
+    margin-right: 20px;
+    transform: translateY(-50%);
+    width: 500px;
+    margin-right:325px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  
+  
+  .equipo {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 100px;
+    /* outline: red 1px solid; */
+    /* height: 60vh; */
+  }
+  
+  .integrante {
+    height: 640px;
+    width: 400px;
+    /* outline: blue 1px solid; */
+    border-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .text-overlay h5 {
+    font-family: 'Primary-font';
+    font-size: 33px;
+    font-weight: 800;
+  }
+  
+  .text-overlay a {
+    font-family: 'Primary-font';
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    /* text-decoration: none; */
+  }
+
+  .scroll-button-adn {
+    background: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 90%;
+    /* left: 50%; */
+  }
+  
+  .scroll-button-adn svg {
+    width: 66px;
+    height: 66px;
+  }
+  
+  .scroll-button-adn svg path {
+    fill: white;
+  }
+  
