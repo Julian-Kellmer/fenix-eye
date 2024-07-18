@@ -110,10 +110,10 @@ nav ul li a {
 
 .info-representacion {
   text-align: center;
-  margin: auto 150px;
+  /* margin: auto 150px;
   width: 750px;
-  height: auto; /* Cambiado de 70px a auto para que se ajuste al contenido */
-  text-align: left;
+  height: auto; 
+  text-align: left; */
 }
 
 .info-representacion h3 {
@@ -160,16 +160,16 @@ nav ul li a {
 }
 
 .servicios-colaboraciones {
-  display: flex;
-  width: 100%;
+  /* display: flex;
+  width: 100%; */
 }
 
 .info-servicios {
-  text-align: right;
+  /* text-align: right;
   margin: auto 0;
   width: 50%;
-  height: auto; /* Cambiado de 70px a auto para que se ajuste al contenido */
-  text-align: right;
+  height: auto;  */
+  text-align: center;
 }
 
 .info-servicios h3 {
@@ -321,7 +321,7 @@ nav ul li a {
 
 .contacto {
   width: 100vw;
-  margin-top: 250px;
+  margin-top: 100px;
 }
 
 .contacto h4 {
@@ -403,7 +403,10 @@ nav ul li a {
   color: white;
 }
 
-@media (max-width:768px) {
+@media only screen and (max-width:768px) {
+  .other-pages {
+    padding-bottom: 0px;
+  }
   body{
     width: 100vw;
   }
@@ -453,12 +456,23 @@ nav ul li a {
     margin-bottom: 20px; /* Añade espacio entre las secciones */
   }
   
-  .info-representacion {
-    text-align: center;
-    margin: auto 10px;
+  .representacion-container {
+    flex-direction: column-reverse;
+  }
 
+  .xs-pt-50 {
+    padding-top: 50px !important;
+  }
+
+  .xs-d-none {
+    display: none !important;
+  }
+
+  .info-representacion {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    text-align: center;
     width: 60vw;
-    text-align: left;
   }
   
   .info-representacion h3 {
@@ -475,9 +489,10 @@ nav ul li a {
   .info-representacion p {
     font-family: 'Secondary-font';
     font-weight: 200;
-    font-size: 12px;
+    font-size: 16px;
     color: #ffffff;
-    margin-top: 20px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
   }
   
   .info-representacion a {
@@ -499,7 +514,6 @@ nav ul li a {
   .servicios-colaboraciones {
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
   
   .info-servicios {
@@ -556,7 +570,7 @@ nav ul li a {
   .divisor {
     position: relative;
     width: 100vw;
-    height:150px;
+    height: 100px;
     overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
     display: flex;
     justify-content: center;
@@ -586,8 +600,7 @@ nav ul li a {
     flex-direction:column-reverse;
 margin-left:10px;
     width: 100vw;
-    height: 500px;
-    margin-top: 100px;
+    margin-top: 20px;
     justify-content: center;
     align-items:start;
   }
@@ -598,7 +611,7 @@ margin-left:10px;
   }
   .more-info-text p {
     font-family: 'Secondary-font';
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 200;
     margin-left: 8px;
     width: 100%;

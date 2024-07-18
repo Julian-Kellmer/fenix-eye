@@ -2,7 +2,6 @@
     display: flex;
     position: relative;
     justify-content: center;
-    margin-left: 150px;
     width: 700px;
     height: 725px;
     /* outline: red 1px solid; */
@@ -11,8 +10,8 @@
   .container-carousel {
     /* position: relative; */
     /* margin: 0 60px; */
-    width: 656px;
-    height: 725px;
+    /* width: 656px;
+    height: 725px; */
     /* margin-left: 70px; */
     border-radius: 30px;
     overflow: hidden;
