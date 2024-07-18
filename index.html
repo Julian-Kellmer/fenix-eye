@@ -33,12 +33,13 @@
           <li><a href="noticias.html">Noticias</a></li>
           <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
           <li><a href="contacto.html" class="Contacto">Contacto</a></li>
-          
         </ul>
       </nav>
-      <span class="material-symbols-outlined">
+      
+      <span class="material-symbols-outlined btn-h" id="menu-toggle">
         menu
       </span>
+
       <!-- <nav class="navResponsive">
         <li><a href="representacion.html">Representación</a></li>
         <li><a href="serv-colab.html">Servicios y colaboración</a></li>
@@ -47,6 +48,16 @@
         <li><a href="contacto.html" class="Contacto">Contacto</a></li>
       </nav> -->
     </header>
+
+    <nav id="nav-responsive">
+      <ul class="nav-list-responsive">
+        <li><a href="representacion.html">Representación</a></li>
+        <li><a href="serv-colab.html">Servicios y Colaboración</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
+        <li><a href="contacto.html" class="Contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
     <section class="content">
         <img src="/Recursos_Pagina_web/FondoHero (1).png" alt="fondo_main" />
@@ -176,7 +187,7 @@
       </div>
     </section>
 
-    <section class="divisor">
+    <section class="divisor ">
       <img src="/Recursos_Pagina_web/divisor_img.jpg" alt="" class="xs-d-none"/>
       <h4>UNA NUEVA OPCIÓN PARA IMPULSAR LA <br />CARRERA DE ARTISTAS EMERGENTES</h4>
     </section>
@@ -202,7 +213,6 @@
         <h5>SOMBRAHH</h5>
       </div>
     </article>
-    
 
     <article class="more-info">
       <div class="vicenncio-img">
@@ -229,7 +239,8 @@
     <div class="noticias">
       <h4>NOTICIAS</h4>
       <div class="noticias-container">
-        <a href="noticia1.html"
+        <div>
+          <a href="noticia1.html"
           ><figure class="noticia">
             <img src="/Recursos_Pagina_web/jamie.jpg" alt="" />
             <figcaption>
@@ -238,24 +249,29 @@
             </figcaption>
           </figure></a
         >
-        <a href="noticia2.html">
-          <figure class="noticia">
-            <img src="Recursos_Pagina_web/microfonp.jpg" alt="" />
-            <figcaption>
-              <h6>NOTICIA 2</h6>
-              <p>Author</p>
-            </figcaption>
-          </figure></a
-        >
-        <a href="noticia3.html">
-          <figure class="noticia">
-            <img src="Recursos_Pagina_web/podcast.jpg" alt="" />
-            <figcaption>
-              <h6>NOTICIA 3</h6>
-              <p>Author</p>
-            </figcaption>
-          </figure></a
-        >
+        </div>
+        <div>
+          <a href="noticia2.html">
+            <figure class="noticia">
+              <img src="Recursos_Pagina_web/microfonp.jpg" alt="" />
+              <figcaption>
+                <h6>NOTICIA 2</h6>
+                <p>Author</p>
+              </figcaption>
+            </figure></a
+          >
+        </div>
+        <div>
+          <a href="noticia3.html">
+            <figure class="noticia">
+              <img src="Recursos_Pagina_web/podcast.jpg" alt="" />
+              <figcaption>
+                <h6>NOTICIA 3</h6>
+                <p>Author</p>
+              </figcaption>
+            </figure></a
+          >
+        </div>
       </div>
 
     <div class="contacto">

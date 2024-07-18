@@ -348,6 +348,7 @@ nav ul li a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 50px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
@@ -359,6 +360,7 @@ nav ul li a {
 }
 
 .contacto-region {
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -415,7 +417,6 @@ nav ul li a {
     color: white;
     height: 30vh; /* Para que la sección ocupe toda la altura de la ventana */
     width: 100vw;
-    outline: 1px red solid;
     position: relative;
     /* object-fit: contain; */
     
@@ -637,23 +638,20 @@ margin-left:10px;
     font-size: 24px;
   }
   .vicenncio-text p {
-    /* margin-left:80px ; */
-    width: 80%;
+     margin-left:0px ; 
+    width: 100%;
     font-family: 'Secondary-font';
     font-weight: 200;
-    font-size: 24px;
+    font-size: 15px;
     color: white;
-    margin-left: 150px;
   }
   .vicenncio-img {
     width: 450px;
     height: 450px;
-    margin-left: 80px;
     align-items: left;
   }
   .vicenncio-img img {
-    height: 365px;
-    margin-right: 1500px;
+    height: 150px;
   }
   
   .vicenncio-img h5 {
@@ -667,16 +665,17 @@ margin-left:10px;
   
   .contacto {
     width: 100vw;
-    margin-top: 250px;
+    margin-top: 0px;
   }
   
   .contacto h4 {
     font-family: 'Primary-font';
     font-weight: 700;
-    font-size: 71px;
-    margin-left: 80px;
+    font-size: 46px;
     position: relative;
     color: white;
+    margin: 0px;
+    padding-top: 60px;
   }
   
   .contacto h4::after {
@@ -693,11 +692,13 @@ margin-left:10px;
     backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    margin: 75px auto;
+    width: 90%;
+    margin: 25px auto;
   }
   
   .contacto-region {
+    margin-top: 40px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -715,6 +716,7 @@ margin-left:10px;
   }
   
   .separator {
+    display: none;
     width: 1px;
     height: 100px;
     background-color: white;

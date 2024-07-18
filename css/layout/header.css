@@ -113,20 +113,37 @@ nav ul li a {
 }
 
 */
+
+#nav-responsive {
+  margin-top: 100px;
+  display: none;
+}
 @media only screen and (min-width: 600px){
-  .navResponsive {
+  #nav-responsive {
     display: none;
   }
-  #nav {
-    display: block;
+  .nav-list {
+    display: flex;
+  }
+  .btn-h {
+    display: none !important;
   }
 }
 
 @media only screen and (max-width: 600px){
-  .navResponsive {
-    display: inline-block;
+  #nav-responsive.show {
+    display: flex;
+    z-index: 100000000;
   }
-  #nav {
+  #nav-responsive ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .nav-list {
     display: none;
+  }
+  .btn-h {
+    display: block !important;
   }
 }
