@@ -1,13 +1,8 @@
 /* main.css */
-/* Ajustes generales */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Secondary-font', sans-serif;
-}
+
 
 /* Ajustes del header */
-.header {
+/* .header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -43,7 +38,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-}
+} */
 
 /* Ajustes de la sección principal */
 .content {
@@ -406,4 +401,332 @@ nav ul li a {
   font-weight: 400;
   font-size: 24px;
   color: white;
+}
+
+@media (max-width:768px) {
+  body{
+    width: 100vw;
+  }
+  .content {
+    text-align: center;
+    color: white;
+    height: 30vh; /* Para que la sección ocupe toda la altura de la ventana */
+    width: 100vw;
+    outline: 1px red solid;
+    position: relative;
+    /* object-fit: contain; */
+    
+  }
+  .contenedorTexto {
+    width: 30%;
+    height: 20%;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+  }
+  .contenedorTexto h2{
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    font-weight: 700;
+
+  }
+  
+  .scroll-button-home {
+    
+    display: none ;
+    
+  }
+  .other-pages{
+    width: 100%;
+    margin: 0;
+  }
+  .representacion{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .info-representacion{
+    width:100%;
+  }
+  .representacion {
+    display: flex;
+    margin-bottom: 20px; /* Añade espacio entre las secciones */
+  }
+  
+  .info-representacion {
+    text-align: center;
+    margin: auto 10px;
+
+    width: 60vw;
+    text-align: left;
+  }
+  
+  .info-representacion h3 {
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .info-representacion h3::after {
+    display: none;
+  }
+  
+  .info-representacion p {
+    font-family: 'Secondary-font';
+    font-weight: 200;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  
+  .info-representacion a {
+    font-family: 'Secondary-font';
+    font-weight: 400;
+    font-size: 12px;
+    color: #ff8300;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5px; /* Añade un poco de espacio arriba */
+  }
+  
+  .info-representacion span {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .servicios-colaboraciones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .info-servicios {
+    text-align: right;
+    margin-right: 25px ;
+    width: 100%;
+    height: auto; /* Cambiado de 70px a auto para que se ajuste al contenido */
+  }
+  
+  .info-servicios h3 {
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 24px;
+    
+    color: white;
+  }
+  
+  .info-servicios h3::before {
+    display:none;
+  }
+  
+  .info-servicios p {
+    font-family: 'Secondary-font';
+    font-weight: 200;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  
+  .info-servicios a {
+    font-family: 'Secondary-font';
+    font-weight: 400;
+    font-size: 12px;
+    color: #ff8300;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px; /* Añade un poco de espacio arriba */
+  }
+  
+  .info-servicios span {
+    display:none;
+  }
+  
+  .contendor-carrusel-servicios {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 700px;
+    height: 725px;
+    margin-bottom: 100px; /* Añade espacio entre las secciones */
+  }
+  
+  .divisor {
+    position: relative;
+    width: 100vw;
+    height:150px;
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .divisor img {
+    width: 100vw;
+    height: 300px;
+    object-fit: cover; 
+    display:none;
+    /* object-position: 50% -2000px; */
+    transform: scale(0.9);
+  }
+  
+  .divisor h4 {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Primary-font', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .more-info {
+    display: flex;
+    flex-direction:column-reverse;
+margin-left:10px;
+    width: 100vw;
+    height: 500px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items:start;
+  }
+  
+  .more-info-text {
+    width: 90vw;
+    margin-left:  5px;
+  }
+  .more-info-text p {
+    font-family: 'Secondary-font';
+    font-size: 12px;
+    font-weight: 200;
+    margin-left: 8px;
+    width: 100%;
+    color: white;
+  }
+  .more-info-img {
+    width: 450px;
+    height: auto;
+    margin-right: 80px;
+    margin: top 0;
+    align-items: right;
+  }
+  .more-info-img img {
+    height: 150px;
+  }
+  
+  .more-info-img h5 {
+    text-align: right;
+    color: white;
+    margin: 10px 75px 0 0;
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .vicenncio-text p {
+    /* margin-left:80px ; */
+    width: 80%;
+    font-family: 'Secondary-font';
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+    margin-left: 150px;
+  }
+  .vicenncio-img {
+    width: 450px;
+    height: 450px;
+    margin-left: 80px;
+    align-items: left;
+  }
+  .vicenncio-img img {
+    height: 365px;
+    margin-right: 1500px;
+  }
+  
+  .vicenncio-img h5 {
+    text-align: left;
+    color: white;
+    margin: 10px 60px;
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 31px;
+  }
+  
+  .contacto {
+    width: 100vw;
+    margin-top: 250px;
+  }
+  
+  .contacto h4 {
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 71px;
+    margin-left: 80px;
+    position: relative;
+    color: white;
+  }
+  
+  .contacto h4::after {
+    display:none;
+  }
+  
+  .contacto-conteiner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 75px auto;
+  }
+  
+  .contacto-region {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Secondary-font';
+    align-items: center;
+  }
+  
+  .contacto-region h6 {
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 46px;
+    margin-bottom: 10px;
+  }
+  
+  .separator {
+    width: 1px;
+    height: 100px;
+    background-color: white;
+    opacity: 0.5;
+    margin: 0 20px;
+  }
+  
+  .phone-number,
+  .email-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .phone-number svg,
+  .email-info svg {
+    margin-right: 10px;
+  }
+  
+  .phone-number p,
+  .email-info p {
+    font-family: 'Secondary-font';
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+  }
+
 }

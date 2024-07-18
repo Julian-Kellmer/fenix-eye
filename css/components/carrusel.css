@@ -93,3 +93,100 @@
   carrusel-text {
     position: absolute;
   }
+  @media (max-width:768px) {
+    .contendor-carrusel {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      margin-left: 5px;
+      width: 350px;
+      height: 300px;
+      outline: rgb(239, 41, 51)
+    }
+    
+    .container-carousel {
+      /* position: relative; */
+      /* margin: 0 60px; */
+      width: 300px;
+      height: 250px;
+      /* margin-left: 70px; */
+      border-radius: 30px;
+      overflow: hidden;
+      outline: red 1px solid;
+    }
+    
+    .carruseles {
+      width: 200%;
+      height: 100%;
+      display: flex;
+    }
+    .slider-section {
+      width: calc(100% / 2);
+      height: 100%;
+      position: relative;
+    }
+    
+    .slider-section img {
+      object-fit: cover;
+      border-radius: 30px;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .btn-right,
+    .btn-left {
+      width: 50px;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      font-size: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transform: translate(0, -50%);
+      transition: 0.5s ease;
+      user-select: none;
+      color: white;
+    }
+    .glass-button {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .glass-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .carrusel-text {
+      position: absolute;
+      bottom: 20px; /* Ajusta según sea necesario */
+      left: 40px; /* Ajusta según sea necesario */
+      color: white;
+      font-size: 1.5rem;
+      /* background-color: rgba(0, 0, 0, 0.5); Fondo semitransparente */
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .carrusel-text h3 {
+      font-family: 'Primary-font';
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: 7px;
+    }
+    .btn-left:hover,
+    .btn-right:hover {
+      font-size: 1.7rem;
+    }
+    .btn-left {
+      left: 0px;
+    }
+    .btn-right {
+      right: 0px;
+    }
+    carrusel-text {
+      position: absolute;
+    }
+  }

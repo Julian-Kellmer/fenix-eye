@@ -20,8 +20,11 @@
       <a href="index.html">
         <img src="/Recursos_Pagina_web/Logo/Logo_Fenixx eye.png" alt="Logo" class="logo">
       </a>
-      <nav>
-        <ul>
+      <button class="menu-toggle" id="menu-toggle">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <nav id="nav">
+        <ul class="nav-list">
           <li><a href="representacion.html">Representación</a></li>
           <li><a href="serv-colab.html">Servicios y colaboración</a></li>
           <li><a href="noticias.html">Noticias</a></li>
@@ -32,8 +35,7 @@
     </header>
 
     <section class="content">
-      <div class="overlay">
-        <img src="/Recursos_Pagina_web/Imagenes/Nuevacarpeta/FondoHero.png" alt="fondo_main" />
+        <img src="/Recursos_Pagina_web/FondoHero (1).png" alt="fondo_main" />
         <div class="contenedorTexto">
           <h2>
             CONVIRTAMOS <br />LO AUTÉNTICO EN<br />
@@ -53,7 +55,6 @@
               d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
           </svg>
         </button>
-      </div>
     </section>
 
     <section class="other-pages" id="other-pages">
@@ -67,7 +68,7 @@
             <div class="carruseles" id="slider1">
               <section class="slider-section">
                 <img
-                  src="/Recursos_Pagina_web/Imagenes/5326e70e57ecedcde606b139c8007e09.jpg"
+                  src="/Recursos_Pagina_web/show_azulCarrusel1a.jpg"
                   alt="fredy" />
                 <div class="carrusel-text">
                   <h3>NOMBRE DEL <br />ARTISTA</h3>
@@ -75,7 +76,7 @@
               </section>
               <section class="slider-section">
                 <img
-                  src="/Recursos_Pagina_web/Imagenes/322840e5795e82919c4555c7ac8e7216.jpg"
+                  src="/Recursos_Pagina_web/carrusel1b.jpg"
                   alt="beyonce" />
                 <div class="carrusel-text">
                   <h3>NOMBRE DEL <br />ARTISTA</h3>
@@ -100,7 +101,7 @@
             ritmos innovadores, nuestros artistas estan aqui para cautivar tus sentidos.
           </p>
           <div>
-            <a href="#">Conoce más<span class="material-symbols-outlined">arrow_right_alt</span></a>
+            <a href="representacion.html">Conoce más<span class="material-symbols-outlined">arrow_right_alt</span></a>
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@
             grabación hasta promoción y distribución.
           </p>
           <div>
-            <a href="#">Conoce más<span class="material-symbols-outlined">arrow_right_alt</span></a>
+            <a href="serv-colab.html">Conoce más<span class="material-symbols-outlined">arrow_right_alt</span></a>
           </div>
         </div>
 
@@ -132,7 +133,7 @@
               <div class="carruseles" id="slider2">
                 <section class="slider-section">
                   <img
-                    src="/Recursos_Pagina_web/Imagenes/Nuevacarpeta/b6355144fd434c58683e72ef702f573f.jpg"
+                    src="/Recursos_Pagina_web/camara1.jpg"
                     alt="camara" />
                   <div class="carrusel-text">
                     <h3>NOMBRE DEL <br />SERVICIO</h3>
@@ -140,7 +141,7 @@
                 </section>
                 <section class="slider-section">
                   <img
-                    src="/Recursos_Pagina_web/Imagenes/shutterstock_1010455447.jpg"
+                    src="/Recursos_Pagina_web/mic-contrato.jpg"
                     alt="documentos" />
                   <div class="carrusel-text">
                     <h3>NOMBRE DEL <br />SERVICIO</h3>
@@ -160,7 +161,7 @@
     </section>
 
     <section class="divisor">
-      <img src="/Recursos_Pagina_web/Imagenes/Nuevacarpeta/divisor_img.jpg" alt="" />
+      <img src="/Recursos_Pagina_web/divisor_img.jpg" alt="" />
       <h4>UNA NUEVA OPCIÓN PARA IMPULSAR LA <br />CARRERA DE ARTISTAS EMERGENTES</h4>
     </section>
 
@@ -213,7 +214,7 @@
       <div class="noticias-container">
         <a href="noticia1.html"
           ><figure class="noticia">
-            <img src="/Recursos_Pagina_web/Imagenes/Nuevacarpeta/jamie.jpg" alt="" />
+            <img src="/Recursos_Pagina_web/jamie.jpg" alt="" />
             <figcaption>
               <h6>NOTICIA 1</h6>
               <p>Author</p>
@@ -222,7 +223,7 @@
         >
         <a href="noticia2.html">
           <figure class="noticia">
-            <img src="Recursos_Pagina_web/Imagenes/Nuevacarpeta/microfonp.jpg" alt="" />
+            <img src="Recursos_Pagina_web/microfonp.jpg" alt="" />
             <figcaption>
               <h6>NOTICIA 2</h6>
               <p>Author</p>
@@ -231,7 +232,7 @@
         >
         <a href="noticia3.html">
           <figure class="noticia">
-            <img src="Recursos_Pagina_web/Imagenes/Nuevacarpeta/podcast.jpg" alt="" />
+            <img src="Recursos_Pagina_web/podcast.jpg" alt="" />
             <figcaption>
               <h6>NOTICIA 3</h6>
               <p>Author</p>
@@ -386,7 +387,7 @@
         <p>Copyright © 2023</p>
       </div>
     </footer>
-
+    <script src="toggleMenu.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

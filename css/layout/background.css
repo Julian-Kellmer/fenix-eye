@@ -3,10 +3,28 @@ body {
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100%;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
   }
   @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-size: 200% 200%; /* Ajustar el tamaño del background */
+      animation: gradient-small 20s ease infinite; /* Diferente duración de la animación si es necesario */
+    }
+  }
+
+  @keyframes gradient-small {
     0% {
       background-position: 0% 50%;
     }
