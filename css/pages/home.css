@@ -455,23 +455,23 @@ nav ul li a {
     width: 100vw;
   }
   .content {
-    text-align: center;
+    /* text-align: center; */
     color: white;
-    height: 30vh; /* Para que la sección ocupe toda la altura de la ventana */
+    height: 30vh; 
     width: 100vw;
     position: relative;
     /* object-fit: contain; */
   }
   .contenedorTexto {
-    width: 30%;
-    height: 20%;
+    width: 100%;
+    height: 50%;
     position: absolute;
-    top: 100px;
+    top: 45%;
     left: 10px;
   }
   .contenedorTexto h2 {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 30px;
     letter-spacing: 5px;
     font-weight: 700;
   }
@@ -537,7 +537,7 @@ nav ul li a {
   .info-representacion a {
     font-family: 'Secondary-font';
     font-weight: 400;
-    font-size: 12px;
+    font-size: 18px;
     color: #ff8300;
     text-decoration: none;
     display: inline-flex;
@@ -741,6 +741,14 @@ nav ul li a {
     text-align: center;
     margin-top: 10px;
   }
+  .noticias h4 {
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 46px;
+    text-align: center;
+    color: white;
+    margin: 50px auto;
+}
   .noticia p{
     text-align: center;
   }
