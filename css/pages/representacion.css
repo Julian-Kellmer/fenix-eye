@@ -12,6 +12,24 @@
   width: 100vw;
 }
 
+.mt-100px {
+  margin-top: 100px !important;
+}
+
+.container-representacion {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.main-bg-representacion {
+  background-position-y: -150px;
+  background-size: cover;
+  height: 100vh;
+  background-image: url("../../Recursos_Pagina_web/micro-hero-representacion.jpg");
+  mask-image: linear-gradient(black 70%, transparent)
+}
+
 .contenedor-texto-representacion {
   width: 40vw;
   height: 277px;
@@ -22,20 +40,22 @@
   color: white;
 }
 
-.contenedor-texto-representacion h1 {
+.container-representacion h1 {
   font-family: 'Primary-font', sans-serif;
   font-size: 80px;
   font-weight: 700;
   text-align: left;
   line-height: 85.33px;
+  color: white;
 }
 
-.contenedor-texto-representacion p {
+.container-representacion p {
   width: 100%;
   text-align: left;
   font-family: 'Secondary-font';
   font-weight: 400;
   font-size: 24px;
+  color: white;
 }
 
 .scroll-button-representacion {
@@ -176,4 +196,67 @@
   width: 3000px;
   height: 3px;
   background-color: white;
+}
+
+@media only screen and (max-width: 600px){
+  .container-representacion h1 {
+    font-size: 32px;
+  }
+  
+  .container-representacion p {
+    font-size: 20px;
+  }
+
+  .main-bg-representacion {
+    background-position-y: 0px;
+  }
+
+  .artistas {
+    margin-top: 50px;
+  }
+
+  .artista-left {
+    flex-wrap: wrap;
+    margin: 0px;
+    flex-direction: row;
+  }
+
+  .artista-left .imagen-informacion, .artista-left p{
+    width: 100%;
+  }
+
+  .artista-left p, .imagen-informacion {
+    display: inline-block;
+  }
+
+  .imagen-informacion img, .imagen-informacion .info{
+    position: relative;
+  }
+
+  .imagen-informacion .info {
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .vicenncio-img-container {
+    text-align: center;
+  }
+
+  .artista-rigth {
+    margin-top: 100px;
+  }
+
+  .artista-rigth .quote{
+    text-align: center;
+    width: 100%;
+  }
+
+  .artista-rigth .imagen-informacion .informacion {
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  .imagen-informacion {
+    width: 100%;
+  }
 }
