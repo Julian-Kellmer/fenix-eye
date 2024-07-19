@@ -111,7 +111,7 @@
       /* margin-left: 70px; */
       border-radius: 30px;
       overflow: hidden;
-      outline: red 1px solid;
+      /* outline: red 1px solid; */
     }
     
     .carruseles {
@@ -180,10 +180,10 @@
       font-size: 1.7rem;
     }
     .btn-left {
-      left: 0px;
+      left: 50px;
     }
     .btn-right {
-      right: 0px;
+      right: 50px;
     }
     carrusel-text {
       position: absolute;
