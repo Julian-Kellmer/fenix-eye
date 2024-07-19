@@ -5,7 +5,7 @@
 }
 .contenedor-texto-Contacto {
   /* width: 10vw; */
-  height: 60vh;
+  height: 80vh;
   /* outline: 1px red solid; */
   top: 50px;
   right: 150px;
@@ -17,10 +17,26 @@
 #form-container {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 50px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 30%;
+  width: 40%;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  color: white; /* Color del texto */
+  font-size: 20px; /* Tamaño de la fuente */
+
+  padding: 10px; /* Opcional: Espaciado interno */
+  width: 100%; /* Opcional: Ajustar el ancho al 100% del contenedor */
+}
+
+#contact-form input[type="text"]::placeholder,
+#contact-form input[type="email"]::placeholder,
+#contact-form textarea::placeholder {
+  color: #ccc; /* Color del placeholder (texto de ayuda dentro del input) */
 }
 
 .user_name {
@@ -47,7 +63,7 @@
   display: block;
 }
 
-h2 {
+#form-container h2 {
   text-align: center;
   margin-bottom: 20px;
   font-family: 'Primary-font';
@@ -87,22 +103,30 @@ textarea {
   /* border-radius: 4px; */
 }
 
-button {
+#form-container button {
   height: 10%;
-  width: 20%;
-  padding: 10px;
-  background-color: transparent;
+  width: 30%;
+  padding: 15px 10px;
+  background-color: white;
   border: none;
   border-radius: 50px;
-  color: white;
-  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  font-size: 22px;
   cursor: pointer;
   border: 1px white solid;
-  margin: 15px 40%;
-  /* text-align: center]; */
-  /* outline: green 1px solid; */
+  margin: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#form-container button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.btnContainer {
+  text-align: center;
+}
 
 #success-message {
   text-align: center;
@@ -110,6 +134,24 @@ button {
   margin-top: 20px;
 }
 
-@media (max-width:768px) {
-    
+@media only screen and (max-width:600px) {
+    .bg-contact {
+      display: none;
+    }
+    #form-container {
+      width: 90%;
+      height: 90vh;
+    }
+    .contenedor-texto-Contacto {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+    .hero-noticias {
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+    #form-container button{
+      width: 50%;
+    }
 }

@@ -1,20 +1,14 @@
-document.addEventListener('scroll', function () {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 100) {
-    header.classList.add('transparent');
-  } else {
-    header.classList.remove('transparent');
-  }
-});
 
-document.addEventListener('scroll', function () {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 100) {
-    header.classList.add('transparent');
-  } else {
-    header.classList.remove('transparent');
-  }
-});
+
+// document.addEventListener('scroll', function () {
+//   const header = document.querySelector("#nav-responsive");
+//   if (window.scrollY > 100) {
+//     header.classList.add('transparent');
+//   } else {
+//     header.classList.remove('transparent');
+//   }
+// });
+
 
 const sliders = [
   {
