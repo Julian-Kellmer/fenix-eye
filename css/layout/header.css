@@ -13,7 +13,8 @@
   z-index: 1000;
 }
 
-.header.transparent {
+
+.transparent {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
@@ -144,7 +145,10 @@ nav ul li a {
 #nav-responsive {
   margin-top: 100px;
   display: none;
+ 
 }
+
+
 @media only screen and (min-width: 600px){
   #nav-responsive {
     display: none;
@@ -161,6 +165,19 @@ nav ul li a {
   #nav-responsive.show {
     display: flex;
     z-index: 100000000;
+
+  }
+  nav ul {
+    gap: 10px;
+  }
+  nav {
+    background-color: black;
+    position: fixed;
+  }
+  #nav-responsive {
+    width: 100%;
+    margin-top: 85px;
+    padding-bottom: 20px;
   }
   #nav-responsive ul{
     display: flex;
