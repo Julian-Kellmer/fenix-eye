@@ -162,6 +162,9 @@ nav ul li a {
 }
 
 @media only screen and (max-width: 600px){
+  .logo {
+    margin-left: 0px;
+  }
   #nav-responsive.show {
     display: flex;
     z-index: 100000000;

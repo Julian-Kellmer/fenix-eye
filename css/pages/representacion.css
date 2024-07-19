@@ -272,4 +272,8 @@
   .info h2, .informacion h2 {
     font-size: 32px;
   }
+
+  .scroll-button-representacion {
+    left: 45% !important;
+  }
 }
