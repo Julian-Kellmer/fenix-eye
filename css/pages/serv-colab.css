@@ -274,20 +274,44 @@
     font-size: 32px;
   }
 
-  .img-text {
+  .img-text, .img-text-marketing {
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  .img-text .texto {
+  .img-text .texto, .img-text-marketing .texto-marketing {
     text-align: center;
   }
 
-  .img-text .texto h3, .img-text .texto h4{
+  .img-text .texto h3, .img-text .texto h4, .img-text-marketing .texto-marketing h3, .img-text-marketing .texto-marketing h4{
     font-size: 32px;
   }
 
   .gestion-container {
+    margin-bottom: 0px !important;
+  }
+
+  .img-text-marketing {
+    flex-direction: column-reverse;
+  }
+
+  .texto-marketing h4::before {
+    right: 85%
+  }
+
+  .gestion-container {
     margin-top: 0px;
+  }
+
+  .servicios-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .servicio {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 300px;
   }
 }

@@ -17,8 +17,8 @@
 .noticias-container {
   display: flex;
   flex-direction: row;
-  width: 80%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   gap: 10px; 
 }
 

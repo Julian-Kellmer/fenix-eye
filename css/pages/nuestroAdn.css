@@ -7,8 +7,8 @@
     /* width: 100vw; */
     height: 20vh;
     text-align: center;
-    width: 1400px;
-    margin: 300px auto;
+    width: 100%;
+    margin-top: 50px;
   }
   .info-adn h4 {
     color: white;
@@ -18,6 +18,7 @@
     text-align: left;
     margin-top: 25px;
   }
+ 
   .info-adn p {
     color: white;
     font-family: 'Secondary-font';
@@ -29,7 +30,6 @@
   }
 
   .hero-video {
-    position: relative;
     width: 100%;
     max-width: 1200px; /* Ajusta el tamaño según tus necesidades */
     margin:  auto;
@@ -241,5 +241,84 @@
   
   .scroll-button-adn svg path {
     fill: white;
+  }
+  
+  /* --- --- */
+
+  .container-adn {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-bg-adn {
+    background-position-y: 0px;
+    background-size: cover;
+    height: 120vh;
+    background-image: url("../..//Recursos_Pagina_web/NUESTRO_ADN.jpg");
+    mask-image: linear-gradient(black 70%, transparent)
+  }
+  
+  .container-adn h1 {
+    font-family: 'Primary-font', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 85.33px;
+    color: white;
+  }
+
+  @media only screen and (max-width: 600px){
+    .info-adn h4 {
+      text-align: center;
+    }
+    .main-bg-adn {
+      background-position-x: -200px;
+      height: 100vh;
+    }
+    .hero-video {
+      margin-top: 850px;
+      margin-bottom: 100px;
+    }
+    .ilustracion-fenix {
+      margin: 0px;
+    }
+    .ilustracion-fenix h5{
+      font-size: 32px;
+      width: 100%;
+      padding: 10px;
+    }
+    .ilustracion-fenix img {
+      margin-bottom: 0px;
+    }
+    .equipo-container {
+      width: 100%;
+      margin: 0px;
+    }
+    .texto-equipo {
+      gap: 0px;
+      flex-direction: column;
+    }
+    .texto-equipo h4, .texto-equipo p {
+      text-align: center;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .texto-equipo h4 {
+      font-size: 32px;
+    }
+    .texto-equipo h4::before {
+      left: 85%;
+      top: 50%;
+    }
+    .integrante {
+      width: 100%;
+      height: 350px;
+      margin-bottom: 30px;
+    }
+    .equipo {
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
   }
   

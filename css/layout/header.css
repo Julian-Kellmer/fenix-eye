@@ -5,7 +5,7 @@
   width: 100%;
   background-color: black;
   color: white;
-  padding: 10px 20px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,8 +27,30 @@
 nav ul {
   list-style-type: none;
   display: flex;
-  gap: 100px;
-  margin-right: 56px;
+  gap: 20px;
+  padding-right: 20px;
+  margin-bottom: 0px;
+}
+
+nav ul li{
+  padding: 15px 40px;
+}
+
+nav ul li:hover{
+  background: white;
+}
+
+nav ul li:hover a{
+  color: black;
+}
+
+nav ul .nav-item-active{
+  padding: 5px 20px 20px 20px;
+  border-bottom: 2px solid white;
+}
+
+nav ul .nav-item-active a{
+  font-size: 22px;
 }
 
 @media only screen and (max-width: 1400px){
