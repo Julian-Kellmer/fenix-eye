@@ -229,6 +229,10 @@
     display: inline-block;
   }
 
+  .artista-left p, .informacion p {
+    font-size: 20px;
+  }
+
   .imagen-informacion img, .imagen-informacion .info{
     position: relative;
   }
@@ -251,6 +255,10 @@
     width: 100%;
   }
 
+  .informacion h2::before {
+    right: -50px !important;
+  }
+
   .artista-rigth .imagen-informacion .informacion {
     padding-right: 0px;
     text-align: center;
@@ -258,5 +266,9 @@
 
   .imagen-informacion {
     width: 100%;
+  }
+
+  .info h2, .informacion h2 {
+    font-size: 32px;
   }
 }

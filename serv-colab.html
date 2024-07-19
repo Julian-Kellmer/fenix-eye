@@ -18,55 +18,87 @@
   <body>
     <div class="body">
       <header class="header">
-        <a href="index.html">
-          <img src="/Recursos_Pagina_web/Logo/Logo_Fenixx eye.png" alt="Logo" class="logo" />
-        </a>
-        <nav>
-          <ul>
+        <div>
+          <a href="index.html">
+            <img src="/Recursos_Pagina_web/Logo/Logo_Fenixx eye.png" alt="Logo" class="logo">
+          </a>
+        </div>
+        
+        <nav id="nav">
+          <ul class="nav-list">
             <li><a href="representacion.html">Representación</a></li>
-            <li><a href="serv-colab.html">Servicios y colaboración</a></li>
+            <li><a href="serv-colab.html">Servicios y Colaboración</a></li>
             <li><a href="noticias.html">Noticias</a></li>
             <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
             <li><a href="contacto.html" class="Contacto">Contacto</a></li>
           </ul>
         </nav>
+        
+        <span class="material-symbols-outlined btn-h" id="menu-toggle">
+          menu
+        </span>
+  
+        <!-- <nav class="navResponsive">
+          <li><a href="representacion.html">Representación</a></li>
+          <li><a href="serv-colab.html">Servicios y colaboración</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
+          <li><a href="contacto.html" class="Contacto">Contacto</a></li>
+        </nav> -->
       </header>
   
-      <section class="hero-left">
-        <div class="overlay">
-          <img
-            src="/Recursos_Pagina_web/hero-ser-colabok.jpg"
-            alt="fondo_main" />
-          <div class="contenedor-texto">
-            <h1>SERVICIOS <br />Y COLABORACIÓN</h1>
-            <p>
-              Colaboramos con artistas emergentes y empresas musicales a expandir sus negocios,
-              ofreciendo alianzas estratégicas, consultoría especializada y apoyo integral en todas
-              las etapas de su desarrollo y promoción
-            </p>
+      <nav id="nav-responsive">
+        <ul class="nav-list-responsive">
+          <li><a href="representacion.html">Representación</a></li>
+          <li><a href="serv-colab.html">Servicios y Colaboración</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
+          <li><a href="contacto.html" class="Contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <section class="main-bg-serv">
+        
+        <div class="container container-serv">
+          <div class="row mt-0px">
+            <div class="col-md-8">
+              <h1>SERVICIOS Y COLABORACIÓN</h1>
+              <p>
+                Colaboramos con artistas emergentes y empresas musicales a expandir sus negocios,
+                ofreciendo alianzas estratégicas, consultoría especializada y apoyo integral en todas
+                las etapas de su desarrollo y promoción
+              </p>
+            </div>
+            <div class="col-md-4">
+              
+            </div>
           </div>
-          <button class="scroll-button-serv-colab">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-arrow-down-circle"
-              viewBox="0 0 16 16">
-              <path
-                fill-rule="evenodd"
-                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
-            </svg>
-          </button>
         </div>
+        <button class="scroll-button-representacion">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-down-circle"
+            viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+          </svg>
+        </button>
       </section>
+  
+      
       <div class="sub-title">
         <h2>IMPULSANDO EL CRECIMIENTO DE TALENTOS Y EMPRESAS MUSICALES</h2>
       </div>
   
       <section class="gestion-container">
         <div class="img-text">
-          <img src="/Recursos_Pagina_web/Iconos/Gestion musical.png" alt="" />
+          <div>
+            <img src="/Recursos_Pagina_web/Iconos/Gestion musical.png" alt="" />
+          </div>
           <div class="texto">
             <h3>GESTIÓN MUSICAL</h3>
             <h4>INTEGRAL</h4>
@@ -628,11 +660,10 @@
       </footer>
     </div>
 
-    <script src="modal.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <script src="toggleMenu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>

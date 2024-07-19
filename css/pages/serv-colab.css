@@ -207,3 +207,87 @@
   font-weight: 700;
   color: white;
 }
+
+/*--- --- ---*/
+.hero-serv img {
+  width: 100vw;
+}
+
+.mt-100px {
+  margin-top: 100px !important;
+}
+
+.container-serv {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.main-bg-serv {
+  background-position-y: -100px;
+  background-size: cover;
+  height: 120vh;
+  background-image: url("../..//Recursos_Pagina_web/hero-ser-colabok.jpg");
+  mask-image: linear-gradient(black 70%, transparent)
+}
+
+.container-serv h1 {
+  font-family: 'Primary-font', sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 85.33px;
+  color: white;
+}
+
+.container-serv p {
+  width: 100%;
+  text-align: left;
+  font-family: 'Secondary-font';
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+}
+
+@media only screen and (max-width: 600px){
+  .container-serv h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  
+  .container-serv p {
+    font-size: 20px;
+  }
+
+  .main-bg-serv {
+    background-position-y: 0px;
+    height: 100vh;
+  }
+
+  .sub-title {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .sub-title h2{
+    font-size: 32px;
+  }
+
+  .img-text {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .img-text .texto {
+    text-align: center;
+  }
+
+  .img-text .texto h3, .img-text .texto h4{
+    font-size: 32px;
+  }
+
+  .gestion-container {
+    margin-top: 0px;
+  }
+}
