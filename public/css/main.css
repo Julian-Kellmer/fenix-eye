@@ -17,4 +17,59 @@
 @import url('pages/login.css');
 @import url('pages/admin.css');
 
-
+.servicios-colaboraciones {
+    display: flex;
+    /* outline: 1px red solid; */
+    width: 100%;
+  }
+  
+  .info-servicios {
+    width: 50%;
+    text-align: center;
+    /* margin-right: ; */
+  }
+  
+  
+  .info-servicios h3 {
+    font-family: 'Primary-font';
+    font-weight: 700;
+    font-size: 64px;
+    color: white;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+  }
+  
+  /* .info-servicios h3::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 500px; 
+    height: 3px;
+    background-color: white; 
+    margin-right: 500px;
+  } */
+  
+  .info-servicios p {
+    font-family: 'Secondary-font';
+    font-weight: 200;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 20px;
+  }
+  
+  .info-servicios a {
+    font-family: 'Secondary-font';
+    font-weight: 400;
+    font-size: 21px;
+    color: #ff8300;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px; /* Añade un poco de espacio arriba */
+  }
+  
+  .info-servicios span {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+  }
