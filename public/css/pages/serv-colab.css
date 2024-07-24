@@ -227,7 +227,7 @@
   background-position-y: -100px;
   background-size: cover;
   height: 120vh;
-  background-image: url("../..//Recursos_Pagina_web/hero-ser-colabok.jpg");
+  background-image: url("../../images/hero-ser-colabok.jpg");
   mask-image: linear-gradient(black 70%, transparent)
 }
 

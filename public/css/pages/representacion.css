@@ -26,7 +26,7 @@
   background-position-y: -150px;
   background-size: cover;
   height: 100vh;
-  background-image: url("../../Recursos_Pagina_web/micro-hero-representacion.jpg");
+  background-image: url("../../images/micro-hero-representacion.jpg");
   mask-image: linear-gradient(black 70%, transparent)
 }
 

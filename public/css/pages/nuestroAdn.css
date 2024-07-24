@@ -255,7 +255,7 @@
     background-position-y: 0px;
     background-size: cover;
     height: 120vh;
-    background-image: url("../..//Recursos_Pagina_web/NUESTRO_ADN.jpg");
+    background-image: url("../../images/NUESTRO_ADN.jpg");
     mask-image: linear-gradient(black 70%, transparent)
   }
   

@@ -144,7 +144,7 @@
   background-position-x: -400px;
   background-size: cover;
   height: 120vh;
-  background-image: url("../../Recursos_Pagina_web/hero-noticias.png");
+  background-image: url("../../images/hero-noticias.png");
   mask-image: linear-gradient(black 70%, transparent)
 }
 

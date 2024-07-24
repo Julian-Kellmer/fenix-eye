@@ -3,65 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Fennix Eye - Home</title>
-    <link rel="icon" href="/Recursos_Pagina_web/Iconos/Icono fenixx.svg" type="png">
+    <link rel="icon" href="../images/Iconos/Icono fenixx.svg" type="png">
   </head>
   <body>
   
 <div class="body">
-    <header class="header">
-      <div>
-        <a href="index.html">
-          <img src="/Recursos_Pagina_web/Logo/Logo_Fenixx eye.png" alt="Logo" class="logo">
-        </a>
-      </div>
-      
-      <nav id="nav">
-        <ul class="nav-list">
-          <li><a href="representacion.html">Representación</a></li>
-          <li><a href="serv-colab.html">Servicios y Colaboración</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
-          <li><a href="contacto.html" class="Contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      
-      <span class="material-symbols-outlined btn-h" id="menu-toggle">
-        menu
-      </span>
-
-      <!-- <nav class="navResponsive">
-        <li><a href="representacion.html">Representación</a></li>
-        <li><a href="serv-colab.html">Servicios y colaboración</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
-        <li><a href="contacto.html" class="Contacto">Contacto</a></li>
-      </nav> -->
-    </header>
-
-    <nav id="nav-responsive">
-      <ul class="nav-list-responsive">
-        <li><a href="representacion.html">Representación</a></li>
-        <li><a href="serv-colab.html">Servicios y Colaboración</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="nuestroAdn.html">Nuestro ADN</a></li>
-        <li><a href="contacto.html" class="Contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    
+  <%- include('./components/nav.ejs') %>
 
     <section class="content">
-        <img src="/Recursos_Pagina_web/FondoHero (1).png" alt="fondo_main" />
+        <img src="../images/FondoHero (1).png" alt="fondo_main" />
         <div class="contenedorTexto">
           <h2>
             CONVIRTAMOS <br />LO AUTÉNTICO EN<br />
@@ -94,7 +56,7 @@
             <div class="carruseles" id="slider1">
               <section class="slider-section">
                 <img
-                  src="/Recursos_Pagina_web/show_azulCarrusel1a.jpg"
+                  src="../images/show_azulCarrusel1a.jpg"
                   alt="fredy" />
                 <div class="carrusel-text">
                   <h3>NOMBRE DEL <br />ARTISTA</h3>
@@ -102,7 +64,7 @@
               </section>
               <section class="slider-section">
                 <img
-                  src="/Recursos_Pagina_web/carrusel1b.jpg"
+                  src="../images/carrusel1b.jpg"
                   alt="beyonce" />
                 <div class="carrusel-text">
                   <h3>NOMBRE DEL <br />ARTISTA</h3>
@@ -162,7 +124,7 @@
               <div class="carruseles" id="slider2">
                 <section class="slider-section">
                   <img
-                    src="/Recursos_Pagina_web/camara1.jpg"
+                    src="../images/camara1.jpg"
                     alt="camara" />
                   <div class="carrusel-text">
                     <h3>NOMBRE DEL <br />SERVICIO</h3>
@@ -170,7 +132,7 @@
                 </section>
                 <section class="slider-section">
                   <img
-                    src="/Recursos_Pagina_web/mic-contrato.jpg"
+                    src="../images/mic-contrato.jpg"
                     alt="documentos" />
                   <div class="carrusel-text">
                     <h3>NOMBRE DEL <br />SERVICIO</h3>
@@ -189,7 +151,7 @@
     </section>
 
     <section class="divisor ">
-      <img src="/Recursos_Pagina_web/divisor_img.jpg" alt="" class="xs-d-none"/>
+      <img src="../images/divisor_img.jpg" alt="" class="xs-d-none"/>
       <h4>UNA NUEVA OPCIÓN PARA IMPULSAR LA <br />CARRERA DE ARTISTAS EMERGENTES</h4>
     </section>
 
@@ -210,14 +172,14 @@
         </p>
       </div>
       <div class="more-info-img">
-        <img src="/Recursos_Pagina_web/Artistas Assets/Sombrahh.png" alt="" />
+        <img src="../images/Artistas Assets/Sombrahh.png" alt="" />
         <h5>SOMBRAHH</h5>
       </div>
     </article>
 
     <article class="more-info-vineccio">
       <div class="vicenncio-img">
-        <img src="/Recursos_Pagina_web/Artistas Assets/Vicenncio.png" alt="" />
+        <img src="../images/Artistas Assets/Vicenncio.png" alt="" />
         <h5>VINNECIO</h5>
       </div>
       <div class="vicenncio-text">
@@ -242,7 +204,7 @@
       <div class="noticias-container">
         <div>
           <figure class="noticia">
-            <img src="/Recursos_Pagina_web/jamie.jpg" alt="" />
+            <img src="../images/jamie.jpg" alt="" />
             <figcaption>
               <h6>NOTICIA 1</h6>
               <p>Author</p>
@@ -253,7 +215,7 @@
         <div>
           
             <figure class="noticia">
-              <img src="Recursos_Pagina_web/microfonp.jpg" alt="" />
+              <img src="../images/microfonp.jpg" alt="" />
               <figcaption>
                 <h6>NOTICIA 2</h6>
                 <p>Author</p>
@@ -264,7 +226,7 @@
         <div>
           
             <figure class="noticia">
-              <img src="Recursos_Pagina_web/podcast.jpg" alt="" />
+              <img src="../images/podcast.jpg" alt="" />
               <figcaption>
                 <h6>NOTICIA 3</h6>
                 <p>Author</p>
@@ -399,34 +361,13 @@
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-left">
-          <img src="/Recursos_Pagina_web/Iconos/Icono fenixx.svg" alt="Logo" class="footer-logo" />
-        </div>
-        <div class="footer-right">
-          <div class="footer-social">
-            <a href="#"><img src="/Recursos_Pagina_web/Iconos/facebook_bco.svg" alt="Facebook" /></a>
-            <a href="#"><img src="/Recursos_Pagina_web/Iconos/linkedin_bco 1.svg" alt="LinkedIn" /></a>
-            <a href="#"><img src="/Recursos_Pagina_web/Iconos/instagram_bco.svg" alt="Instagram" /></a>
-          </div>
-          <div class="footer-contact">
-            <p>@FENIXXEYELABEL</p>
-            <p>CONTACT@FENIXXEYE.COM</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Copyright © 2023</p>
-      </div>
-    </footer>
-
+    <%- include('./components/footer.ejs') %>
     
   </div>
-    <script src="toggleMenu.js"></script>
+    <script src="../scripts/toggleMenu.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../scripts/script.js"></script>
   </body>
 </html>
