@@ -1,7 +1,149 @@
+.bcakground-admin {
+  background: linear-gradient(-45deg, #ee7752, #000000, #a72f8d, #000000, #057aa5, #000000);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 200% 200%; /* Ajustar el tamaño del background */
+    animation: gradient-small 20s ease infinite; /* Diferente duración de la animación si es necesario */
+  }
+}
+
+@keyframes gradient-small {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .mb-50px {
-    margin-bottom: 50px !important;
+  margin-bottom: 50px !important;
 }
 
 .mt-20px {
-    margin-top: 20px !important;
+  margin-top: 20px !important;
+}
+.body-dashboard {
+  /* outline: blue 1px solid; */
+  margin-bottom: 34px;
+}
+
+.general-cont-admin {
+  /* outline: red 1px solid; */
+  /* From https://css.glass */
+}
+
+.cont-noticia-info-completa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: white solid 1px; */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cont-img-titu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.contenedor-botonera {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-editar {
+  width: 150px;
+}
+.btn-eliminar {
+  width: 150px;
+}
+
+.bcakground-admin {
+  background-color: #1c1c1c; /* Fondo oscuro para la sección */
+  color: #fff; /* Texto blanco para contraste */
+}
+
+.general-cont-admin {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.noticia-item {
+  background-color: #2c2c2c; /* Fondo oscuro para cada noticia */
+  border: 1px solid #444; /* Bordes sutiles */
+}
+
+.icono-noticia {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-noticia img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.noticia-item h6 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.noticia-item p {
+  margin: 0;
+}
+
+.noticia-item .text-muted {
+  font-size: 0.85rem;
+}
+
+.noticia-item .text-success,
+.noticia-item .text-danger {
+  font-weight: bold;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.table-title{
+    margin-left:20px ;
 }

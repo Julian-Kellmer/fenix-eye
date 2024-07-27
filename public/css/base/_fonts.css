@@ -1,3 +1,6 @@
+html{
+  font-size: 16px;
+}
 @font-face {
   font-family: 'Secondary-font';
   src: url(../../fonts/Bai_Jamjuree/BaiJamjuree-ExtraLight.ttf)
