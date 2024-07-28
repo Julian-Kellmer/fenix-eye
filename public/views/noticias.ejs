@@ -61,12 +61,14 @@
   
       <div class="noticias-container">
         <% noticias.forEach(noticia => { %>
-          <figure class="noticia">
-            <img src="../uploads/<%= noticia.image %>" alt="" />
-            <figcaption>
-              <h6><%= noticia.title %></h6>
-            </figcaption>
-          </figure>
+          <a href="/noticias/<%= noticia._id%> ">
+            <figure class="noticia">
+              <img src="../uploads/<%= noticia.image %>" alt="" />
+              <figcaption>
+                <h6><%= noticia.title %></h6>
+              </figcaption>
+            </figure>
+          </a>
         <% }) %>
       </div>
   

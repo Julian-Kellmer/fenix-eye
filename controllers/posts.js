@@ -43,7 +43,7 @@ function createPostFile(data){
     <html>
     <body class="body">
         <%- include('../components/nav.ejs') %>
-            <section class="hero-noticias">
+      <section class="hero-noticias">
       <img src="../../uploads/${data.image}" alt="fondo_main" />
 
       <div class="contenedor-noticia-info-jamie " >
