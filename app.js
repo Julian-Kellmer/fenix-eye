@@ -32,12 +32,10 @@ app.use(methodOverride("_method"))
 const authRouter = require('./router/auth')
 const adminRouter = require('./router/admin')
 const mainRouter = require('./router/main')
-const newsRouter = require('./router/news')
 
 app.use("/", mainRouter)
 app.use("/admin", adminRouter)
 app.use("/auth", authRouter)
-app.use("/noticias", newsRouter)
 
 const users = [];
 const user = {

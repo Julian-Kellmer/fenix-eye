@@ -1,4 +1,6 @@
 const postModel = require("../db/models/Post")
+const fs = require('fs');
+const path = require('path');
 
 const getAllPosts = async (req, res) => {
     try {
@@ -26,6 +28,46 @@ const searchPost = async (req, res) => {
   })
 }
 
+function createPostFile(data){
+    const fileName = `${data._id}.ejs`
+    const filePath = path.join(__dirname, '../public/views/posts', fileName)
+    const content = ` <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fenixx Eye | ${data.title}</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <html>
+    <body class="body">
+        <%- include('../components/nav.ejs') %>
+            <section class="hero-noticias">
+      <img src="../../uploads/${data.image}" alt="fondo_main" />
+
+      <div class="contenedor-noticia-info-jamie " >
+        <h2>${data.title}</h2>
+        <p>
+          ${data.description}
+        </p>
+      </div>
+    </section>
+
+    <%- include('../components/footer.ejs') %>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/form.js"></script>
+    </body>
+    </html>`  
+
+    fs.writeFile(filePath, content, (err) => {
+      if (err) {
+        console.error('Error writing file:', err)
+      }
+    })
+}
+
 const createPost = async (req, res) => {
     const { title, category, description } = req.body;
     const imagePath = req.file.filename;
@@ -35,11 +77,13 @@ const createPost = async (req, res) => {
       category,
       image: imagePath,
       description
-    });
+    })
   
     newPost.save()
 
-    res.send("ok")
+    createPostFile(newPost)
+
+    res.redirect("/admin")
 }
 
 const updatePost = async (req, res) => {

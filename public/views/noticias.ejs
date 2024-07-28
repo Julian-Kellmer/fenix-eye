@@ -55,37 +55,19 @@
         </button>
       </section>
 
-      
-
       <div class="title-news">
         <h4>NOTICIAS</h4>
       </div>
   
       <div class="noticias-container">
-        <figure class="noticia">
-            <img src="/Recursos_Pagina_web/jamie.jpg" alt="" />
-            <figcaption>
-              <h6>NOTICIA 1</h6>
-              <p>Author</p>
-            </figcaption>
-          </figure>
-        
-        
+        <% noticias.forEach(noticia => { %>
           <figure class="noticia">
-            <img src="Recursos_Pagina_web/microfonp.jpg" alt="" />
+            <img src="../uploads/<%= noticia.image %>" alt="" />
             <figcaption>
-              <h6>NOTICIA 2</h6>
-              <p>Author</p>
+              <h6><%= noticia.title %></h6>
             </figcaption>
           </figure>
-        
-          <figure class="noticia">
-            <img src="Recursos_Pagina_web/podcast.jpg" alt="" />
-            <figcaption>
-              <h6>NOTICIA 3</h6>
-              <p>Author</p>
-            </figcaption>
-          </figure>
+        <% }) %>
       </div>
   
       <%- include('./components/footer.ejs') %>
