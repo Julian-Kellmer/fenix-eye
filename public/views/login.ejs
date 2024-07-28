@@ -25,14 +25,7 @@
         <div class="row d-flex flex-column">
           <div class="col-md-6 mt-100px contenedorHijo">
             <div class="contenedor-titulo d-flex flex-column text-align-left ">
-              <h1>Porfavor inicia sesion.</h1>
-              <p>
-                ¡Bienvenido al Portal de Administración de Fennix Eye! <br>En Fennix Eye, estamos
-                comprometidos con la innovación y la creatividad en la industria musical. Nuestro
-                portal de administración es una herramienta clave para mantener a nuestros
-                seguidores informados y conectados con las últimas noticias y lanzamientos de
-                nuestros artistas.
-              </p>
+              <h1>Inicia sesion.</h1>
             </div>
             <form method="POST" action="">
               <div class="form-group">
@@ -53,7 +46,7 @@
                 </div>
               </div>
 
-              <div><% if (messages.error) { %> <%= messages.error %> <% } %></div>
+              <div class="mensaje-de-error"><% if (messages.error) { %> <%= messages.error %> <% } %></div>
 
               <button type="submit" class="btn btn-primary ">Ingresar</button>
             </form>
