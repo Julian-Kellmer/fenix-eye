@@ -65,17 +65,17 @@
         <div class="container caja-noticias">
           <div class="row mb-3">
             <div class="col-md-2"><h4>Titulo</h4></div>
-            <div class="col-md-2 table-title"><h4>Imagen</h4><span>1920x1080</span></div>
+            <div class="col-md-2 table-title"><h4>Imagen</h4></div>
             <div class="col-md-3 table-title"><h4>Descripcion</h4></div>
             <div class="col-md-2 table-title"><h4>Fecha de carga</h4></div>
-            <div class="col-md-2 table-title"><h4></h4></div>
+            <div class="col-md-2 table-title"><h4>Opciones</h4></div>
           </div>
         </div>
 
         <% posts.forEach(post => { %>
 
-        <div class="row mb-8px">
-          <div class="cont-noticia-info-completa">
+        <div class="row mb-3">
+          <div class="cont-noticia-info-completa p-2">
             <div class="col-md-2">
               <a href="/noticias/<%= post._id %>" style="text-decoration: none; color: white">
                 <h2><%= post.title %></h2>
@@ -91,7 +91,7 @@
             <div class="col-md-2">
               <p>Created at: <%= post.createdAt.toDateString() %></p>
             </div>
-            <div class="col-md-2 d-flex">
+            <div class="col-md-2 d-flex" style="margin-bottom: 10px;">
               <button
                 type="button"
                 class="btn btn-primary btn-editar"
@@ -103,12 +103,8 @@
 
               <button type="button" class="btn btn-danger btn-eliminar"  style="margin-left: 10px" id="btn-eliminar"
               onclick="deleteConfirmationMessage('<%= post.image %>', '<%= post._id %>')">Eliminar</button>
-
-              <form action="/admin/delete/<%= post._id %>/<%= post.image %>" method="POST" class="d-inline" id="delete-form">
-              </form>
             </div>
           </div>
-          <hr />
         </div>
         <!-- modales -->
         <div
@@ -129,7 +125,7 @@
               </div>
               <div class="modal-body">
                 <form
-                  action="/admin/update/<%= post._id %>"
+                  action="/admin/update/<%= post._id %>/<%= post.image %>"
                   method="POST"
                   enctype="multipart/form-data">
                   <div class="row">
@@ -153,8 +149,7 @@
                   <div class="row mt-3">
                     <div class="col-md-12">
                       <label for="descripcionProducto">Descripción</label>
-                      <textarea class="form-control" name="description" rows="4">
-<%= post.description %></textarea
+                      <textarea class="form-control" name="description" rows="4"><%= post.description %></textarea
                       >
                     </div>
                   </div>
@@ -177,8 +172,8 @@
 
         <% }) %> <% if (typeof result !== 'undefined' && result.length >= 0) { %> <%
         result.forEach(post => { %>
-          <div class="row mb-8px">
-          <div class="cont-noticia-info-completa">
+          <div class="row mb-3">
+          <div class="cont-noticia-info-completa p-2">
             <div class="col-md-2">
               <a href="/noticias/<%= post._id %>" style="text-decoration: none; color: white">
                 <h2><%= post.title %></h2>
@@ -194,21 +189,20 @@
             <div class="col-md-2">
               <p>Created at: <%= post.createdAt.toDateString() %></p>
             </div>
-            <div class="col-md-2 contenedor-botonera">
+            <div class="col-md-2 d-flex" style="margin-bottom: 10px;">
               <button
                 type="button"
                 class="btn btn-primary btn-editar"
                 data-target="#editarPostModal-<%= post._id %>"
-                data-toggle="modal">
+                data-toggle="modal"
+                style="margin-right: 10px">
                 Editar
               </button>
 
-              <form action="/admin/delete/<%= post._id %>/<%= post.image %>" method="POST" class="d-inline">
-                <button type="submit" class="btn btn-danger btn-eliminar">Eliminar</button>
-              </form>
+              <button type="button" class="btn btn-danger btn-eliminar"  style="margin-left: 10px" id="btn-eliminar"
+              onclick="deleteConfirmationMessage('<%= post.image %>', '<%= post._id %>')">Eliminar</button>
             </div>
           </div>
-          <hr />
         </div>
 
         <div
@@ -235,7 +229,7 @@
               </div>
               <div class="modal-body">
                 <form
-                  action="/admin/update/<%= post._id %>"
+                  action="/admin/update/<%= post._id %>/<%= post.image %>"
                   method="POST"
                   enctype="multipart/form-data">
                   <div class="row">
@@ -306,27 +300,35 @@
                   <div class="row">
                     <div class="col-md-6">
                       <label for="">Titulo</label>
-                      <input type="text" class="form-control" name="title" />
+                      <input type="text" class="form-control" name="title" required/>
                     </div>
                     <div class="col-md-6">
                       <label for="">Categoria</label>
-                      <input type="text" class="form-control" name="category" />
+                      <input type="text" class="form-control" name="category" required/>
                     </div>
                   </div>
                   <div class="row mt-20px">
                     <div class="col-md-12">
                       <label for="">Descripcion</label>
-                      <textarea class="form-control" name="description"></textarea>
+                      <textarea class="form-control" name="description" required></textarea>
                     </div>
                   </div>
 
                   <div class="form-group mt-20px">
-                    <label for="nombreProducto">Imagen</label>
-                    <input type="file" class="form-control" name="image" accept="image/*" />
+                    <label for="nombreProducto" class="mb-0">Imagen</label>
+                    <div>
+                      <span>1920x1080</span>
+                    </div>
+                    <div class="mb-2">
+                      <span>2 MB Maximo</span> 
+                    </div>
+                    <input type="file" class="form-control" required name="image" accept="image/*" />
                   </div>
 
-                  <div class="form-group m-2">
+                  <div class="form-group " 
+                    style="text-align: center; margin-top: 15px;">
                     <button
+                      style="width: 30%; font-size: 18px;"
                       type="submit"
                       class="btn btn-primary btn-create-post"
                       name="submit"

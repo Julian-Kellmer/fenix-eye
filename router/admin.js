@@ -14,7 +14,7 @@ router.get("/search", postsController.searchPost)
 
 router.post("/create", multer.upload.single("image"), postsController.createPost)
 
-router.post("/update/:id", multer.upload.single("image"), postsController.updatePost)
+router.post("/update/:id/:imageId", multer.upload.single("image"), postsController.updatePost)
 
 router.post("/delete/:id/:imageId", postsController.deletePost)
 

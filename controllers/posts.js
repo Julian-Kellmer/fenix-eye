@@ -112,10 +112,11 @@ const createPost = async (req, res) => {
 }
 
 const updatePost = async (req, res) => {
-    const { id } = req.params
+    const { id, imageId } = req.params
     const { title, category, description } = req.body
     const imagePath = req.file ? req.file.filename : null
-  
+    const imageFile = path.join(__dirname, '../public/uploads', `${imageId}`)
+
     const updateData = {
       title,
       category,
@@ -128,9 +129,27 @@ const updatePost = async (req, res) => {
   
     try {
       const updatedPost = await postModel.findByIdAndUpdate(id, updateData, { new: true })
+      console.log(imageFile)
+      
+      if(imagePath){
+        fs.access(imageFile, fs.constants.F_OK, (err) => {
+          if (err) {
+            return res.status(404).json({ error: 'File not found' })
+          }
+    
+          fs.unlink(imageFile, (err) => {
+            if (err) {
+              console.error('Error deleting file:', err)
+              return res.status(500).json({ error: 'Error deleting file' })
+            }
+          })
+        })
+      }
+
       if (!updatedPost) {
         return res.status(404).send('Post not found')
       }
+
       res.redirect("/admin")
     } catch (err) {
       res.status(500).send(err)
@@ -150,7 +169,6 @@ const deletePost = async (req, res) => {
           return res.status(404).send('Post not found');
         }
         
-
         fs.access(postPath, fs.constants.F_OK, (err) => {
           if (err) {
             return res.status(404).json({ error: 'File not found' })
