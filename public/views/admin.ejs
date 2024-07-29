@@ -46,7 +46,7 @@
                     aria-label="Buscar"
                     aria-describedby="basic-addon2"
                     name="title" />
-                  <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                  <button class="btn btn-secondary" type="submit">Buscar</button>
                 </form>
               </div>
             </div>
@@ -63,9 +63,9 @@
         <!--DATA-->
 
         <div class="container caja-noticias">
-          <div class="row">
+          <div class="row mb-3">
             <div class="col-md-2"><h4>Titulo</h4></div>
-            <div class="col-md-2 table-title"><h4>Imagen</h4></div>
+            <div class="col-md-2 table-title"><h4>Imagen</h4><span>1920x1080</span></div>
             <div class="col-md-3 table-title"><h4>Descripcion</h4></div>
             <div class="col-md-2 table-title"><h4>Fecha de carga</h4></div>
             <div class="col-md-2 table-title"><h4></h4></div>
@@ -77,14 +77,16 @@
         <div class="row mb-8px">
           <div class="cont-noticia-info-completa">
             <div class="col-md-2">
-              <h2><%= post.title %></h2>
+              <a href="/noticias/<%= post._id %>" style="text-decoration: none; color: white">
+                <h2><%= post.title %></h2>
+              </a>
             </div>
             <div class="col-md-2">
               <img src="../../uploads/<%= post.image %>" alt="<%= post.title %> image" width="80" />
             </div>
 
             <div class="col-md-3">
-              <p>Description: <%= post.description %></p>
+              <p><%= post.description %></p>
             </div>
             <div class="col-md-2">
               <p>Created at: <%= post.createdAt.toDateString() %></p>
@@ -98,7 +100,7 @@
                 Editar
               </button>
 
-              <form action="/admin/delete/<%= post._id %>" method="POST" class="d-inline">
+              <form action="/admin/delete/<%= post._id %>/<%= post.image %>" method="POST" class="d-inline">
                 <button type="submit" class="btn btn-danger btn-eliminar">Eliminar</button>
               </form>
             </div>
@@ -155,7 +157,7 @@
                   <div class="row mt-3">
                     <div class="col-md-12">
                       <label for="imagenProducto">Imagen</label>
-                      <input type="file" class="form-control-file" name="image" accept="image/*" />
+                      <input type="file" class="form-control" name="image" accept="image/*" />
                     </div>
                   </div>
                   <div class="form-group m-2 contendor-guardar-btn">
@@ -171,31 +173,36 @@
 
         <% }) %> <% if (typeof result !== 'undefined' && result.length >= 0) { %> <%
         result.forEach(post => { %>
-        <div class="row mb-50px">
-          <div class="col-md-2">
-            <img src="../../uploads/<%= post.image %>" alt="<%= post.title %> image" width="200" />
-          </div>
-          <div class="col-md-2">
-            <h2><%= post.title %></h2>
-          </div>
-          <div class="col-md-2">
-            <p>Description: <%= post.description %></p>
-          </div>
-          <div class="col-md-2">
-            <p>Created at: <%= post.createdAt.toDateString() %></p>
-          </div>
-          <div class="col-md-3">
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-target="#editarPostModal-<%= post._id %>"
-              data-toggle="modal">
-              Editar
-            </button>
+          <div class="row mb-8px">
+          <div class="cont-noticia-info-completa">
+            <div class="col-md-2">
+              <a href="/noticias/<%= post._id %>" style="text-decoration: none; color: white">
+                <h2><%= post.title %></h2>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <img src="../../uploads/<%= post.image %>" alt="<%= post.title %> image" width="80" />
+            </div>
 
-            <form action="/admin/delete/<%= post._id %>" method="POST" class="d-inline">
-              <button type="submit" class="btn btn-danger">Eliminar</button>
-            </form>
+            <div class="col-md-3">
+              <p><%= post.description %></p>
+            </div>
+            <div class="col-md-2">
+              <p>Created at: <%= post.createdAt.toDateString() %></p>
+            </div>
+            <div class="col-md-2 contenedor-botonera">
+              <button
+                type="button"
+                class="btn btn-primary btn-editar"
+                data-target="#editarPostModal-<%= post._id %>"
+                data-toggle="modal">
+                Editar
+              </button>
+
+              <form action="/admin/delete/<%= post._id %>/<%= post.image %>" method="POST" class="d-inline">
+                <button type="submit" class="btn btn-danger btn-eliminar">Eliminar</button>
+              </form>
+            </div>
           </div>
           <hr />
         </div>

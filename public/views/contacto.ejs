@@ -24,29 +24,32 @@
 
         <div class="contenedor-texto-Contacto" id="form-container">
           <h2>CONTÁCTANOS</h2>
-          <form>
+          <form id="contact-form" method="POST">
             <div class="user_name">
               <div class="firstName">
                 <label for="nombre">NOMBRE</label>
-                <input type="text" id="nombre" name="nombre" required />
+                <input type="text" id="name-form" name="nombre" required />
               </div>
               <div class="lastName">
                 <label for="apellido">APELLIDO</label>
-                <input type="text" id="apellido" name="apellido" required />
+                <input type="text" id="surname-form" name="apellido" required />
               </div>
             </div>
             <div class="email">
               <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email-form" name="email" required />
             </div>
             <div class="mensaje">
               <label for="mensaje">ESCRIBE UN MENSAJE</label>
-              <textarea id="mensaje" name="mensaje" required></textarea>
+              <textarea id="message-form" name="" required></textarea>
+            </div>
+            
+            <div>
+              <div class="g-recaptcha col-md-3" data-sitekey="6LdKExsqAAAAAAeCH6gm7A86cSYT1HJAJsjCWKAS"></div>
             </div>
 
             <div class="btnContainer">
-              <button type="submit">ENVIAR</button>
-
+              <button type="submit" id="submit-form">ENVIAR</button>
             </div>
           </form>
           <div id="success-message" style="display: none">Mensaje enviado</div>
@@ -57,6 +60,9 @@
 
     </div>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/form.js"></script>
     <script src="../scripts/toggleMenu.js"></script>

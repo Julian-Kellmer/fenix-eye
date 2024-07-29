@@ -138,13 +138,46 @@ const updatePost = async (req, res) => {
 }
 
 const deletePost = async (req, res) => {
-    const { id } = req.params
+    const { id, imageId } = req.params
+    const postPath = path.join(__dirname, '../public/views/posts', `${id}.ejs`)
+    const imagePath = path.join(__dirname, '../public/uploads', `${imageId}`)
+
+    console.log(imagePath)
+
     try {
         const deletedPost = await postModel.findByIdAndDelete(id);
         if (!deletedPost) {
           return res.status(404).send('Post not found');
         }
-        res.redirect("/admin")
+        
+
+        fs.access(postPath, fs.constants.F_OK, (err) => {
+          if (err) {
+            return res.status(404).json({ error: 'File not found' })
+          }
+
+          fs.access(imagePath, fs.constants.F_OK, (err) => {
+            if (err) {
+              return res.status(404).json({ error: 'File not found' })
+            }
+        
+            fs.unlink(postPath, (err) => {
+              if (err) {
+                console.error('Error deleting file:', err)
+                return res.status(500).json({ error: 'Error deleting file' })
+              }
+        
+              fs.unlink(imagePath, (err) => {
+                if (err) {
+                  console.error('Error deleting file:', err)
+                  return res.status(500).json({ error: 'Error deleting file' })
+                }
+          
+                res.redirect("/admin")
+              })
+            })
+          })
+        })
       } catch (err) {
         res.status(500).send(err);
     }
