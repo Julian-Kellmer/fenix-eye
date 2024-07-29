@@ -30,6 +30,7 @@ const searchPost = async (req, res) => {
 
 async function createPostFile(data){
     const allPosts = await postModel.find({})
+    // Filtro de Mas Noticias. De momento se muestran las 3 primeras
     const filteredPosts = allPosts.slice(0,3)
 
     const fileName = `${data._id}.ejs`
@@ -37,7 +38,6 @@ async function createPostFile(data){
 
     let additionalPostsContent = ''
     if (filteredPosts.length > 2){
-      console.log(true)
       filteredPosts.forEach(post => {
         additionalPostsContent += `
           <a href="/noticias/${post._id}">
