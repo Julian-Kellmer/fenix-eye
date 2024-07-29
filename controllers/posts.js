@@ -28,10 +28,31 @@ const searchPost = async (req, res) => {
   })
 }
 
-function createPostFile(data){
+async function createPostFile(data){
+    const allPosts = await postModel.find({})
+    const filteredPosts = allPosts.slice(0,3)
+
     const fileName = `${data._id}.ejs`
     const filePath = path.join(__dirname, '../public/views/posts', fileName)
-    const content = ` <head>
+
+    let additionalPostsContent = ''
+    if (filteredPosts.length > 2){
+      console.log(true)
+      filteredPosts.forEach(post => {
+        additionalPostsContent += `
+          <a href="/noticias/${post._id}">
+            <figure class="noticia">
+              <img src="../../uploads/${post.image}" alt="${post.title}" />
+              <figcaption>
+                <h6>${post.title}</h6>
+                <p>${post.description}</p>
+              </figcaption>
+            </figure>
+          </a>`
+      })
+    } 
+
+    let content = ` <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fenixx Eye | ${data.title}</title>
@@ -43,16 +64,20 @@ function createPostFile(data){
     <html>
     <body class="body">
         <%- include('../components/nav.ejs') %>
-      <section class="hero-noticias">
+    <section class="hero-noticias">
       <img src="../../uploads/${data.image}" alt="fondo_main" />
-
-      <div class="contenedor-noticia-info-jamie " >
+      <div class="contenedorNoticia">
         <h2>${data.title}</h2>
-        <p>
-          ${data.description}
-        </p>
+        <p>${data.description}</p>
       </div>
     </section>
+
+    <div class="noticias">
+      <h4>MAS NOTICIAS</h4>
+      <div class="noticias-container">
+        ${additionalPostsContent}
+      </div>
+    </div>
 
     <%- include('../components/footer.ejs') %>
 

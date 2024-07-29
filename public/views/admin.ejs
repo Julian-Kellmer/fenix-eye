@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="col-md-3 text-end">
-            <form action="/auth/logout?_method=DELETE" method="POST">
+            <form action="/auth/logout?_method=DELETE" method="POST" id="delete-form">
               <button type="submit" class="btn btn-danger w-75">Log Out</button>
             </form>
           </div>
@@ -249,9 +249,8 @@
                       <textarea
                         class="form-control"
                         name="description"
-                        placeholder="<%= post.description %>">
-<%= post.description %></textarea
-                      >
+                        placeholder="<%= post.description %>"><%= post.description %>
+                      </textarea>
                     </div>
                   </div>
                   <div class="row mt-20px">
@@ -329,6 +328,8 @@
         </div>
       </div>
 
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="../scripts/admin.js"></script>
       <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
