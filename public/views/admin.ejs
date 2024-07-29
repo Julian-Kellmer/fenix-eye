@@ -91,17 +91,20 @@
             <div class="col-md-2">
               <p>Created at: <%= post.createdAt.toDateString() %></p>
             </div>
-            <div class="col-md-2 contenedor-botonera">
+            <div class="col-md-2 d-flex">
               <button
                 type="button"
                 class="btn btn-primary btn-editar"
                 data-target="#editarPostModal-<%= post._id %>"
-                data-toggle="modal">
+                data-toggle="modal"
+                style="margin-right: 10px">
                 Editar
               </button>
 
-              <form action="/admin/delete/<%= post._id %>/<%= post.image %>" method="POST" class="d-inline">
-                <button type="submit" class="btn btn-danger btn-eliminar">Eliminar</button>
+              <button type="button" class="btn btn-danger btn-eliminar"  style="margin-left: 10px" id="btn-eliminar"
+              onclick="deleteConfirmationMessage('<%= post.image %>', '<%= post._id %>')">Eliminar</button>
+
+              <form action="/admin/delete/<%= post._id %>/<%= post.image %>" method="POST" class="d-inline" id="delete-form">
               </form>
             </div>
           </div>
@@ -119,7 +122,8 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="editarProductoModalLabel">Editar <%= post.title %></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background: none;
+                border: none;">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -219,6 +223,8 @@
               <div class="modal-header">
                 <h5 class="modal-title" id="editarProductoModalLabel">Editar <%= post.title %></h5>
                 <button
+                style="background: none;
+                border: none;"
                   type="button"
                   class="close"
                   data-dismiss="modal"
