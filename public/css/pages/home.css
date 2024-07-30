@@ -572,7 +572,7 @@ nav ul li a {
   .info-servicios h3 {
     font-family: 'Primary-font';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 24px !important;
 
     color: white;
   }
@@ -584,7 +584,7 @@ nav ul li a {
   .info-servicios p {
     font-family: 'Secondary-font';
     font-weight: 200;
-    font-size: 16px;
+    font-size: 16px !important;
     color: #ffffff;
     margin-top: 20px;
   }
