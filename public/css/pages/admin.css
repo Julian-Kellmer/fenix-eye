@@ -7,6 +7,11 @@
   position: absolute;
 }
 
+.general-cont-admin {
+  padding: 50px !important;
+  background-color: rgba(0,0, 0, 0.6);
+}
+
 .mb-50px {
   margin-bottom: 50px !important;
 }
