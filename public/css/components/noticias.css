@@ -15,6 +15,10 @@
   margin-bottom: 25px;
 }
 
+.post {
+  margin-bottom: 30px;
+}
+
 .post-details {
   margin-top: 100px;
 }
@@ -75,7 +79,5 @@
 }
 
 @media only screen and (max-width: 600px){
-  .post-details {
-    margin-top: 0px;
-  }
+  
 }
