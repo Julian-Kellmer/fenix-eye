@@ -67,10 +67,10 @@
         <div class="row">
           <% noticias.forEach(noticia => { %>
             <div class="col-md-3 post">
-              <a href="/noticias/<%= noticia._id%> ">
+              <a href="/noticias/<%= noticia._id%> " style="text-decoration: none;">
                 <figure class="noticia">
                   <img src="../uploads/<%= noticia.image %>" alt="" />
-                  <figcaption>
+                  <figcaption >
                     <h6><%= noticia.title %></h6>
                   </figcaption>
                 </figure>
