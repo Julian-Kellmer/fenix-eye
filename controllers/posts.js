@@ -202,24 +202,32 @@ async function createPostFile(data){
 
 async function findThreeRandomPosts() {
   try {
-    const count = await postModel.countDocuments()
-    const randomIndexes = []
+    const count = await postModel.countDocuments();
+
+    // Si hay menos de 3 posts, retornar un array vacío
+    if (count < 3) {
+      return [];
+    }
+
+    // Generar índices aleatorios únicos
+    const randomIndexes = [];
     while (randomIndexes.length < 3) {
-      const randomIndex = Math.floor(Math.random() * count)
+      const randomIndex = Math.floor(Math.random() * count);
       if (!randomIndexes.includes(randomIndex)) {
-        randomIndexes.push(randomIndex)
+        randomIndexes.push(randomIndex);
       }
     }
 
+    // Obtener posts aleatorios utilizando los índices generados
     const randomPosts = await postModel.find().skip(randomIndexes[0]).limit(1)
       .then(firstPost => postModel.find().skip(randomIndexes[1]).limit(1)
       .then(secondPost => postModel.find().skip(randomIndexes[2]).limit(1)
-      .then(thirdPost => [firstPost, secondPost, thirdPost])))
+      .then(thirdPost => [firstPost, secondPost, thirdPost])));
       
-    return randomPosts.flat()
+    return randomPosts.flat();
   } catch (err) {
-    console.error('Error finding random posts:', err)
-    throw err
+    console.error('Error finding random posts:', err);
+    throw err;
   }
 }
 
