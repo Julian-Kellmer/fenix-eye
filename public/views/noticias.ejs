@@ -59,17 +59,25 @@
         <h4>NOTICIAS</h4>
       </div>
   
-      <div class="noticias-container">
-        <% noticias.forEach(noticia => { %>
-          <a href="/noticias/<%= noticia._id%> ">
-            <figure class="noticia">
-              <img src="../uploads/<%= noticia.image %>" alt="" />
-              <figcaption>
-                <h6><%= noticia.title %></h6>
-              </figcaption>
-            </figure>
-          </a>
-        <% }) %>
+      <div class="col">
+
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <% noticias.forEach(noticia => { %>
+            <div class="col-md-3">
+              <a href="/noticias/<%= noticia._id%> ">
+                <figure class="noticia">
+                  <img src="../uploads/<%= noticia.image %>" alt="" />
+                  <figcaption>
+                    <h6><%= noticia.title %></h6>
+                  </figcaption>
+                </figure>
+              </a>
+            </div>
+          <% }) %>
+        </div>
       </div>
   
       <%- include('./components/footer.ejs') %>

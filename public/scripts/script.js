@@ -8,7 +8,24 @@
 //     header.classList.remove('transparent');
 //   }
 // });
+let prevScrollpos = window.pageYOffset;
+let isAtTop = true;
 
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (currentScrollPos === 0) {
+      isAtTop = true;
+  } else {
+      isAtTop = false;
+  }
+
+  if (!isAtTop && prevScrollpos < currentScrollPos) {
+      document.getElementById("navbar").style.top = "-100px"
+  } else {
+      document.getElementById("navbar").style.top = "0"
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 const sliders = [
   {

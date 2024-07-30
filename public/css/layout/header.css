@@ -2,6 +2,9 @@
 .header {
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
   width: 100%;
   background-color: black;
   color: white;
@@ -9,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.5s, backdrop-filter 0.5s;
+  transition: top 0.3s ease;
   z-index: 1000;
 }
 

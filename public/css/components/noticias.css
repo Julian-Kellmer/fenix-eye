@@ -8,13 +8,31 @@
 .noticias h4 {
   font-family: 'Primary-font';
   font-weight: 700;
-  font-size: 71px;
+  font-size: 42px;
   text-align: center;
   color: white;
-  margin: 85px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.post-details {
+  margin-top: 100px;
+}
+
+.post-details h2 {
+  font-size: 60px;
+  color: white;
+  font-weight: 600;
+}
+
+.post-details p {
+  font-size: 32px;
+  color: white;
+  font-weight: 600;
 }
 
 .noticias-container {
+  padding-bottom: 50px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -54,4 +72,10 @@
   font-weight: 500;
   color: white;
   text-align: left;
+}
+
+@media only screen and (max-width: 600px){
+  .post-details {
+    margin-top: 0px;
+  }
 }

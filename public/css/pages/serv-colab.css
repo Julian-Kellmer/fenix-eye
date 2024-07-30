@@ -224,11 +224,18 @@
 }
 
 .main-bg-serv {
-  background-position-y: -100px;
+  background-position-y: -150px;
   background-size: cover;
   height: 120vh;
   background-image: url("../../images/hero-ser-colabok.jpg");
   mask-image: linear-gradient(black 70%, transparent)
+}
+
+.main-bg-serv h2 {
+  font-size: 72px;
+  margin-bottom: 200px;
+  color: white;
+  font-weight: 700;
 }
 
 .container-serv h1 {
@@ -250,6 +257,11 @@
 }
 
 @media only screen and (max-width: 600px){
+  
+.main-bg-serv h2 {
+  font-size: 24px;
+  margin-bottom: -100px;
+}
   .container-serv h1 {
     font-size: 32px;
     line-height: 40px;

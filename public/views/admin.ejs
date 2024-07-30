@@ -86,7 +86,10 @@
             </div>
 
             <div class="col-md-3">
-              <p><%= post.description %></p>
+              <p><%= post.description.slice(0,100) %>
+              <% if(post.description.length > 100){ %>
+                <span>...</span>  
+              <% } %></p>
             </div>
             <div class="col-md-2">
               <p>Created at: <%= post.createdAt.toDateString() %></p>

@@ -8,7 +8,7 @@ router.get("/", (req, res) => res.render("index"))
 
 router.get("/noticias", async (req, res) => {
     try {
-        const noticias = await postModel.find({})
+        const noticias = await postModel.find({}).sort({ createdAt: -1 })
         res.render("noticias", {
             noticias
         })
