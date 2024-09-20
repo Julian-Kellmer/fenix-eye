@@ -135,24 +135,93 @@ textarea {
   margin-top: 20px;
 }
 
-@media only screen and (max-width:600px) {
-    .bg-contact {
-      display: none;
-    }
-    #form-container {
-      width: 90%;
-      height: 90vh;
-    }
-    .contenedor-texto-Contacto {
-      position: relative;
-      top: 0;
-      right: 0;
-    }
-    .hero-noticias {
-      margin-top: 50px;
-      margin-bottom: 100px;
-    }
-    #form-container button{
-      width: 50%;
-    }
+@media only screen and (max-width: 600px) {
+  /* Hide background image on small screens */
+  
+  .bg-contact {
+    display: none;
+    /* margin-top: 25px; */
+  }
+
+  /* Adjust form container width and height for mobile */
+  #form-container {
+    width: 90%; /* Make the form take up most of the width */
+    height: auto; /* Let the height adjust automatically */
+    padding: 20px; /* Add some padding for smaller screens */
+  }
+
+  /* Adjust the container text */
+  .contenedor-texto-Contacto {
+    position: relative; /* Make it relative for better control on smaller screens */
+    top: 50px;
+    right: 0;
+    width: 100%; /* Make sure the container uses full width */
+    padding: 20px; /* Add padding to the content */
+    border-radius: 20px; /* Smaller border radius for mobile */
+  }
+
+  /* Reduce the size of the input fields and text */
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+    font-size: 16px; /* Reduce font size */
+    padding: 8px; /* Reduce padding */
+  }
+
+  #contact-form input[type="text"]::placeholder,
+  #contact-form input[type="email"]::placeholder,
+  #contact-form textarea::placeholder {
+    font-size: 14px; /* Smaller placeholder font size */
+  }
+
+  /* Adjust name fields to be full width and stack vertically */
+  .user_name {
+    flex-direction: column; /* Stack first name and last name vertically */
+    gap: 0; /* Remove gap */
+  }
+
+  .firstName,
+  .lastName {
+    width: 100%; /* Full width on small screens */
+  }
+
+  /* Reduce the size of the button */
+  #form-container button {
+    width: 100%; /* Full width on mobile */
+    font-size: 18px; /* Smaller font size for the button */
+  }
+
+  /* Adjust reCAPTCHA container */
+  .g-recaptcha {
+    /* margin: 10px auto; */
+    width: 25%;
+  }
+
+  /* Adjust button container on small screens */
+  .btnContainer {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  /* Adjust the height of the message text area */
+  textarea {
+    height: 150px; /* Smaller height for the message input */
+  }
+
+  /* Adjust spacing and margins for other elements */
+  #form-container h2 {
+    font-size: 28px; /* Smaller heading size */
+    margin-bottom: 20px; /* Less margin below heading */
+  }
+
+  label {
+    font-size: 18px; /* Smaller font for labels */
+  }
+
+  /* Adjust margins for the hero section */
+  .hero-noticias {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
 }
